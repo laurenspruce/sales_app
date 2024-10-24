@@ -10,12 +10,12 @@ When the app starts it should prompt the user to QUIT by typing QUIT or PRESS EN
 public class Part2 {
 
     // Function to calculate VAT
-    public static double calculateVAT(double price, double vatRate) {
+    public double calculateVAT(double price, double vatRate) {
         return (price * vatRate) / 100;
     }
 
     // Function to handle the VAT calculation process
-    public static void processVATCalculations(Scanner scanner) {
+    public void processVATCalculations(Scanner scanner) {
         System.out.print("Please enter the VAT rate: ");
         double vatRate = scanner.nextDouble();
 
@@ -38,7 +38,7 @@ public class Part2 {
         System.out.println("Total amount for all items: £" + totalAmount);
     }
 
-    public static void main(String[] args) {
+    public void processInput() {
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
@@ -51,5 +51,9 @@ public class Part2 {
         }
 
         scanner.close();
+    }
+    public static void main(String[] args) {
+        Part2 p2 = new Part2();
+        p2.processInput();
     }
 }
